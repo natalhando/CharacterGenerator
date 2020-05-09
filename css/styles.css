@@ -16,13 +16,72 @@ canvas {
     position: absolute;
     height: 100%;
     z-index: 1;
+    background-color: #78AEFF;
 }
 
 .micro {
-    background-color: #78AEFF;
+    background-color: #2A2E37;
     z-index: 2;
     height: 500px;
     position: relative;
     top: 50%;
     margin-top: -250px;
+    padding: 0 !important;
+}
+
+.menu-top {
+    border-bottom-width: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.aba {
+    margin-top: 5px;
+}
+
+.idiomas {
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+
+.idioma {
+    background-color: transparent;
+    border-width: 0;
+    color: #FFFFFF;
+}
+
+.idioma:hover {
+    transition-property: all;
+    transition-duration: 0.5s;
+    color: #CCDBFF;
+}
+
+.content {
+    background-color: #2C323A;
+    height: 100%;
+}
+
+.corpo {
+    height: 80%;
+    position: relative;
+    top: 10%;
+    text-align: center;
+}
+
+.logo {
+    height: 150px;
+    fill: #B3C9FF;
+}
+
+.cont-descricao {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.descricao {
+    color: #FFFFFF;
+    font-family: sans-serif;
+    text-align: justify;
+    font-size: 15px;
 }

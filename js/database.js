@@ -1,0 +1,25 @@
+var dados = {
+    nomes: [],
+    sobrenomes: [],
+    generos: [],
+    idades: [],
+    nacionalidades: [],
+    situacoesFinanceiras: [],
+    lemasDeVida: [],
+    ocupacoes: [],
+    segredos: [],
+    coisasMarcantes: [],
+    personalidades: [],
+    historiasDeFundo: [],
+    genders: [],
+    ages: [],
+    nationalities: [],
+    financialStatus: [],
+    mottos: [],
+    ocupations: [],
+    secrets: [],
+    importantStuff: [],
+    personalities: [],
+    backgroundStories: []
+};
+

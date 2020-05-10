@@ -1,5 +1,5 @@
 var descricao = ["O What Up? é um software gerador de personagens aleatórios. Aqui, você tem a possibilidade de gerar personagens praticamente completos com detalhes como nome, idade, nacionalidade, história de fundo, emprego etc.",
-                 "What Up? is a software where you can generate random characters. Here, you have the possibility of generating fully formed characters, with informations such as name, age, nationality, background story, job etc"];
+                 "What Up? is random character generator software. Here, you have the possibility of generating fully formed characters, with details such as name, age, nationality, background story, job etc"];
 var txtGerar = ["Gerar personagem",
                 "Generate character"];
 var txtNome = ["Nome", "Name"];
@@ -76,8 +76,11 @@ botaoGerar.addEventListener("click", () => {
 });
 
 var dados = {
-  generos: ["Feminino", "Masculino"],
-  idades: ["10","20","30"],
+  /* Versao em portugues */
+  generos: ["Feminino", "Masculino", "Não-Binário"],
+  idades: ["10","15","16","17","18","19","21","20","25","28","30",
+           "Na casa dos 20","Na casa dos 30","40","45","49","50","60",
+           "70","80","90","Na casa dos 40"],
   nacionalidades: ["Brasileiro/a",
                    "Americano/a", "Canadense", "Ingles/a",
                    "Coreano/a",
@@ -91,23 +94,204 @@ var dados = {
                    "Filipino/a",
                    "Frances/a",
                    "Italiano/a"],
-  situacoesFinanceiras: ["rico","pobre"],
-  lemasDeVida: ["arrogancia é a chave do sucesso","finja até que seja real"],
-  ocupacoes: ["desempregado","programador"],
-  segredos: ["ja matou uma pessoa","tem sangue real"],
-  coisasMarcantes: ["tem medo de borboletas","ama café"],
-  personalidades: ["muito alegre","sempre melancólico"],
-  historiasDeFundo: ["é órfão","foi um popstar durante a infância"],
-  genders: ["female", "male"],
-  ages: ["10","20","30"],
-  nationalities: ["brazilian","american"],
-  financialStatus: ["rich","poor"],
-  mottos: ["being bold is the key","fake it until you make it"],
-  ocupations: ["unemployed","developer"],
-  secrets: ["already killed a person","has royal relatives"],
-  importantStuff: ["doesn't like butterflies","loves coffe"],
-  personalities: ["very happy","always down"],
-  backgroundStories: ["is an orphan","used to be a popstar"]
+  situacoesFinanceiras: ["Rico","Pobre","Classe média","Bilionário","Endividado",
+                         "Vivendo um dia após o outro","Economizando dinheiro"],
+  lemasDeVida: ["Arrogância é a chave do sucesso",
+                "Finja até que seja real",
+                "Acredite e você estará na metade do caminho",
+                "Nada é tão ruim que não possa piorar",
+                "Sempre há uma razão para ser grato",
+                "Poderia estar pior",
+                "Vivendo a vida adoidado",
+                "Chorar não paga as contas",
+                "Se eu não acreditar em mim, quem vai?",
+                "Existe sempre alguém passando por algo pior",
+                "Apenas sorrir e acenar",
+                "Ninguém precisa saber da sua dor",
+                "A grama do vizinho é sempre mais verde"],
+  ocupacoes: ["Desempregado","Programador","Engenheiro/a Civil","Arquiteto/a",
+              "Pintor/a","Cantor/a","Pedreiro/a","Artista","Desenvolvedor/a de Jogos",
+              "Escritor/a","Advogado/a","Juiz/a","Empresário/a","Chef","Policial",
+              "Compositor/a","Massagista","Estudante","Pesquisador/a","Barista",
+              "Corretor/a de imóveis","Dançarino/a","Atendende de telemarketing",
+              "Enfermeiro/a","Babá","Zelador/a","Professor/a","Animador/a",
+              "Ladrão/a","Banqueiro/a","CEO","Gerente","Jogador/a de futebol"],
+  segredos: ["Já matou uma pessoa",
+             "Tem sangue real",
+             "Já testemunhou um assassinato",
+             "É apaixonado/a pelo chefe",
+             "Detesta animais de estimação",
+             "Destruiu o relacionamento dos vizinhos por vingança",
+             "Todas as suas ações visam benefício próprio",
+             "Chora sempre que assiste filmes de cachorro",
+             "Canta muito bem",
+             "Todas as suas grandes ideias são plágios",
+             "Todos os seus troféus são falsos",
+             "Arranca fios de cabelo quando está nervoso/a",
+             "Possui ficha criminal",
+             "Mente sobre seu nome verdadeiro",
+             "É viciado em cannolis",
+             "Toma leite de amêndoas mesmo sabendo que faz mal para o meio ambiente",
+             "Vende drogas",
+             "Tem um sotaque falso"],
+  coisasMarcantes: ["Tem medo de borboletas",
+                    "Ama café",
+                    "Fala 5 idiomas",
+                    "Tem muitos amigos virtuais",
+                    "Parece muito com uma celebridade",
+                    "Tem o cabelo colorido",
+                    "É muito inteligente",
+                    "Gosta de corrigir os outros",
+                    "É o/a mais velho/a do grupo de amigos",
+                    "Tem dificuldade em compreender sarcasmo",
+                    "Usa blusas de histórias em quadrinhos",
+                    "Tem um sotaque muito característico",
+                    "Extremamente organizado/a",
+                    "É uma pessoa extremamente festeira",
+                    "Está sempre com um copo de cerveja na mão",
+                    "Vive reclamando do trabalho",
+                    "Gosta de dançar enquanto caminha",
+                    "Anda mancando",
+                    "Tem um olho de vidro",
+                    "Tem um dente de ouro",
+                    "Faz piadas quando está nervoso/a"],
+  personalidades: ["Muito alegre",
+                   "Sempre melancólico",
+                   "É uma pessoa muito amável e doce",
+                   "Não se abre com ninguém",
+                   "Tem uma personalidade sombria",
+                   "Está sempre sorrindo",
+                   "Está sempre fazendo drama",
+                   "Uma pessoa muito extrovertida",
+                   "Uma pessoa tímida, mas legal",
+                   "Uma pessoa desprezível",
+                   "Está sempre julgando os outros",
+                   "Uma pessoa muito cuidadosa",
+                   "Prefere ter razão do que ser gentil",
+                   "Prefere ser gentil do que ter razão"],
+  historiasDeFundo: ["É órfão",
+                     "Foi um popstar durante a infância",
+                     "Tudo o que faz é com o objetivo de dar uma boa vida para a família",
+                     "Esconde de todos ao seu redor um assassinato que cometeu no passado",
+                     "Teve que deixar seu país natal por motivos políticos",
+                     "Perdeu os pais em um atentado",
+                     "Sua vida se baseia em tentar superar a irmã",
+                     "Vive uma vida extremamente tediosa, em seu emprego e em seus relacionamentos",
+                     "Vive em uma fazenda, distante da cidade",
+                     "Possui uma identidade secreta, na qual finge ser uma pessoa comum",
+                     "Tem duas familias",
+                     "Seu pai foi condenado injustamente por assassinato",
+                     "Nasceu na pobreza e batalhou para estar onde está",
+                     "Vive toda a sua vida na busca de vingança",
+                     "Quer tornar o mundo um lugar melhor"],
+  /* Versao em ingles */
+  genders: ["Female", "Male", "Non-Binary"],
+  ages: ["10","15","16","17","18","19","21","20","25","28","30",
+         "In their 20s","In their 30s","40","45","49","50","60",
+         "70","80","90","In their 40s"],
+  nationalities: ["Brazilian",
+                  "American", "Canadian", "English",
+                  "Korean",
+                  "Chinese",
+                  "Peruvian", "Colombian", "Chilean","Venezuelan",
+                  "Indian",
+                  "Thai",
+                  "Kenyan",
+                  "Japanese",
+                  "Vietnamese",
+                  "Filipino",
+                  "French",
+                  "Italian"],
+  financialStatus: ["Rich","Poor","Middle class","Billionaire","In debt",
+                    "Living a day after the other","Saving money"],
+  mottos: ["Being bold is the key to success",
+           "Fake it until you make it",
+           "Believe you can and you're half way there",
+           "Nothing is so bad that it can't get worse",
+           "There's always a reason to be grateful",
+           "It could be worse",
+           "Livin' la vida loca",
+           "Crying won't pay the bills",
+           "If I don't believe I can do it, who's going to?",
+           "There's always someone going through something worse",
+           "Just smile and wave",
+           "Conceal, don't feel, don't let them know",
+           "The grass is always greener on the other side"],
+  ocupations: ["Unemployed", "Programmer", "Civil Engineer", "Architect",
+               "Painter", "Singer", "Mason", "Artist", "Game Developer",
+               "Writer", "Lawyer", "Judge", "Entrepreneur", "Chef", "Police Officer",
+               "Composer", "Massage therapist", "Student", "Researcher", "Barista",
+               "Realtor", "Dancer", "Telemarketing Attendant",
+               "Nurse", "Nanny", "Caretaker", "Teacher", "Animator",
+               "Thief", "Banker", "CEO", "Manager", "Footballer"],
+  secrets: ["Already killed a person",
+            "Has royal relatives",
+            "Has already witnessed a murder",
+            "They're in love with their boss",
+            "Hates pets",
+            "Destroyed their neighbors' relationship for revenge",
+            "All their actions are aimed at their own benefit",
+            "Cries whenever watching dog movies",
+            "Sings very well",
+            "All their big ideas are plagiarism",
+            "All of their trophies are fake",
+            "Pulls hairs out when they're nervous",
+            "Has a criminal record",
+            "Lies about their real name",
+            "They're addicted to cannolis",
+            "Drinks almond milk even though they know it's bad for the environment",
+            "Sells drugs",
+            "Has a fake accent"],
+  importantStuff: ["Afraid of butterflies",
+                    "Loves coffee",
+                    "Speaks 5 languages",
+                    "Has a lot of virtual friends",
+                    "They're a celebrity doppelganger",
+                    "Has dyed hair",
+                    "They're really smart",
+                    "Likes to correct others",
+                    "The oldest of their group of friends",
+                    "Has a hard time understanding sarcasm",
+                    "Wears comic book sweaters",
+                    "Has a very characteristic accent",
+                    "Extremely organized",
+                    "A party person",
+                    "Always has a glass of beer in their hand",
+                    "Always complaining about work",
+                    "Likes to dance while walking",
+                    "Walks limping",
+                    "Has a glass eye",
+                    "Has a gold tooth",
+                    "Makes jokes when nervous"],
+  personalities: ["Very happy",
+                  "Always down",
+                  "A very kind and sweet person",
+                  "Doesn't open up to anyone",
+                  "Has a dark personality",
+                  "Always smiling",
+                  "Overly dramatic",
+                  "A very outgoing person",
+                  "A shy person, but nice",
+                  "A despicable person",
+                  "Always judging others",
+                  "A very careful person",
+                  "Would rather be right than be kind",
+                  "Rather be kind than be right"],
+  backgroundStories: ["Is an orphan",
+                      "Used to be a teen popstar",
+                      "Everything they do is aimed at giving their family a good life",
+                      "Hides from everyone a murder they committed in the past",
+                      "Had to leave their native country for political reasons",
+                      "Lost their parents in a terrorist attack",
+                      "Their life is based on trying to outdo their sister",
+                      "Lives an extremely tedious life",
+                      "Lives on a farm, far from the city",
+                      "Has a secret identity, in which he pretends to be an ordinary person",
+                      "Has two families",
+                      "Their father was wrongfully convicted of murder",
+                      "They were born in poverty and struggled to be where they are now",
+                      "Lives the whole life in search of revenge",
+                      "Wants to make the world a better place"]
 };
 
 var nomesPersonalizados = {
@@ -209,6 +393,9 @@ var sobrenomesPersonalizados = {
 };
 
 function geraNome() {
+  if (generoAtual == 2) {
+    generoAtual = aleatorio(0,1);
+  }
   // Mulher brasileira
   if (generoAtual == 0 && nacionalidadeAtual == 0) {
     var indice = aleatorio(0,nomesPersonalizados.nomesBrF.length-1);
@@ -222,7 +409,7 @@ function geraNome() {
   // Mulher americana, canadense ou inglesa
   else if (generoAtual == 0 && nacionalidadeAtual >= 1 && nacionalidadeAtual <= 3) {
     var indice = aleatorio(0,nomesPersonalizados.nomesIngF.length-1);
-    return nomesPersonalizados.nomIngF[indice];
+    return nomesPersonalizados.nomesIngF[indice];
   }
   // Homem americano, canadense ou ingles
   else if (generoAtual == 1 && nacionalidadeAtual >= 1 && nacionalidadeAtual <= 3) {
@@ -252,7 +439,7 @@ function geraNome() {
   // Mulher peruana, colombiana, chilena ou venezuelana
   else if (generoAtual == 0 && nacionalidadeAtual >= 6 && nacionalidadeAtual <= 9) {
     var indice = aleatorio(0,nomesPersonalizados.nomesEsF.length-1);
-    return nomesPersonalizados.nomEsF[indice];
+    return nomesPersonalizados.nomesEsF[indice];
   }
   // Homem peruano, colombiano, chileno ou venezuelano
   else if (generoAtual == 1 && nacionalidadeAtual >= 6 && nacionalidadeAtual <= 9) {
@@ -261,13 +448,13 @@ function geraNome() {
   }
   // Mulher indiana
   else if (generoAtual == 0 && nacionalidadeAtual == 10) {
-    var indice = aleatorio(0,nomesPersonalizados.nomeIndF.length-1);
+    var indice = aleatorio(0,nomesPersonalizados.nomesIndF.length-1);
     return nomesPersonalizados.nomesIndF[indice];
   }
   // Homem indiano
   else if (generoAtual == 1 && nacionalidadeAtual == 10) {
     var indice = aleatorio(0,nomesPersonalizados.nomesIndM.length-1);
-    return nomesPersonalizados.nomeIndM[indice];
+    return nomesPersonalizados.nomesIndM[indice];
   }
   // Mulher tailandesa
   else if (generoAtual == 0 && nacionalidadeAtual == 11) {

@@ -1,5 +1,5 @@
 var descricao = ["O What Up? é um software gerador de personagens aleatórios. Aqui, você tem a possibilidade de gerar personagens praticamente completos com detalhes como nome, idade, nacionalidade, história de fundo, emprego etc.",
-                 "What Up? is random character generator software. Here, you have the possibility of generating fully formed characters, with details such as name, age, nationality, background story, job etc"];
+                 "What Up? is a random character generator software. Here, you have the possibility of generating fully formed characters, with details such as name, age, nationality, background story, job etc"];
 var txtGerar = ["Gerar personagem",
                 "Generate character"];
 var txtNome = ["Nome", "Name"];
